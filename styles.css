@@ -5,7 +5,51 @@
 }
 
 body {
+  height: 100vh;
   font-family: 'Muli', sans-serif;
   overflow: hidden;
   margin: 0;
+  background: rgb(14, 20, 54);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.container {
+  width: 100%;
+  display: flex;
+  padding: 0 20px;
+}
+  
+.slide {
+    height: 80vh;
+    margin: 20px;
+    color: #fff;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    flex: 1;
+    cursor: pointer;
+    position: relative;
+    transition: all 500ms ease-in-out;
+  }
+
+  .slide h3 {
+    position: absolute;
+    font-size: 24px;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+  }
+
+  .slide.active {
+    flex: 10;
+
+  }
+
+  .slide.active h3 {
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s ;
+  }
